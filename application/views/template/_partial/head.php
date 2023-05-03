@@ -3,7 +3,7 @@
 <link rel="apple-touch-icon" sizes="76x76" href="<?= base_url() ?>assets/img/apple-icon.png">
 <link rel="icon" type="image/png" href="<?= base_url() ?>assets/img/favicon.png">
 <title>
-	One Advertising
+	Si-Kas IDI
 	<?php if(!empty($this->uri->segment(1))) echo ": " . ucfirst($this->uri->segment(1)); if(!empty($this->uri->segment(2))) echo" - " . ucfirst($this->uri->segment(2)) ?>
 </title>
 <!--     Fonts and icons     -->
