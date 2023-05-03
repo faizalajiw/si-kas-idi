@@ -17,7 +17,7 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="<?= base_url() ?>assets/vendor/bootstrap/css/bootstrap.min.css">
 
-	<title>One Advertising</title>
+	<title>Si Kas IDI</title>
 	<style>
 		@media (max-width: 575.98px) {
 			.img-carousel{
@@ -31,7 +31,7 @@
 	<!-- Navbar -->
 	<nav id="navbarscrl" class="navbar navbar-expand-lg sticky-top navbar-dark bg-primary">
 		<div class="container">
-			<a class="navbar-brand fw-bold" href="">One Advertising</a>
+			<a class="navbar-brand fw-bold" href="">Si Kas IDI</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
 				aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
