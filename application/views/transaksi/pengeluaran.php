@@ -27,14 +27,18 @@
 										class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
 										Tanggal</th>
 									<th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-										Catatan
+										Keterangan
 									</th>
 									<th
 										class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
 										Jumlah Pengeluaran</th>
 									<th
 										class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-										User</th>
+										Kategori</th>
+									<th class="text-secondary opacity-7"></th>
+									<!-- <th
+										class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+										User</th> -->
 									<th class="text-secondary opacity-7"></th>
 								</tr>
 							</thead>
@@ -42,19 +46,24 @@
 								<?php foreach($pengeluaran as $row) : ?>
 								<tr>
 									<td class="align-middle text-center">
-										<span class="text-secondary text-xs font-weight-bold"><?= $row->tanggal ?></span>
+										<span class="text-secondary text-sm font-weight-bold"><?= $row->tanggal ?></span>
 									</td>
 									<td>
-										<p class="text-xs text-secondary mb-0"><?= $row->catatan ?></p>
+										<p class="text-sm text-secondary mb-0"><?= $row->catatan ?></p>
 									</td>
 									<td>
-										<p class="text-xs font-weight-bold mb-0">Rp. <?= number_format($row->jumlah) ?></p>
+										<p class="text-sm font-weight-bold mb-0">Rp. <?= number_format($row->jumlah) ?></p>
 									</td>
-									<td>
+									<!-- <td>
 										<p class="text-xs text-secondary mb-0"><?= $row->nama ?></p>
+									</td> -->
+									<td class="align-middle text-center text-sm">
+										<span>
+											<?= $row->status ?>
+										</span>
 									</td>
 									<td class="align-middle">
-										<a href="<?= base_url('transaksi/pengeluaran_hapus/').$row->id_pengeluaran ?>" onclick="return confirm('Hapus ?')"
+										<a href="<?= base_url('transaksi/pengeluaran_hapus/').$row->id_pengeluaran ?>" onclick="return confirm('Apakah anda yakin menghapus data?')"
 											class="text-secondary text-danger font-weight-bold text-xs">
 											<i class="material-icons opacity-10" translate="no">delete
 											</i>
@@ -93,15 +102,24 @@
 						</div>
 					</div>
 					<div class="row my-3">
-						<label>Catatan</label>
+						<label>Keterangan</label>
 						<div class="input-group input-group-outline">
 							<textarea name="catatan" class="form-control" cols="10" rows="3"></textarea>
 						</div>
 					</div>
 					<div class="row my-3">
-						<label>Jumlah Pemasukan</label>
+						<label>Jumlah Pengeluaran</label>
 						<div class="input-group input-group-outline">
 							<input type="number" name="jumlah" required class="form-control">
+						</div>
+					</div>
+					<div class="row my-3">
+						<div class="input-group input-group-outline">
+							<select class="form-control" name="status">
+								<option value="">Pilih Kategori</option>
+								<option value="selesai">Selesai</option>
+								<option value="pending">Pending</option>
+							</select>
 						</div>
 					</div>
 				</div>

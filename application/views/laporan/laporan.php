@@ -64,7 +64,7 @@
 		var end = moment();
 
 		function cb(start, end) {
-			$('#tangal').val(start.format('YYYY-MM-DD') + ' - ' + end.format('YYYY-MM-DD'));
+			$('#tanggal').val(start.format('DD-MM-YYYY') + ' - ' + end.format('DD-MM-YYYY'));
 		}
 
 		$('#tanggal').daterangepicker({

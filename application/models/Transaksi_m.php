@@ -42,6 +42,7 @@ class Transaksi_m extends CI_Model
             'tanggal' => $post['tanggal'],
             'catatan' => $post['catatan'],
             'jumlah' => $post['jumlah'],
+            'status' => $post['status'],
             'user' => $this->session->userdata('id_user')
         ];
 

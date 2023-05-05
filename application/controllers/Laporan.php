@@ -34,17 +34,16 @@ class Laporan extends CI_Controller
         $pdf->SetFont('Times', 'B', 10);
         $pdf->Cell(190, 7, '', 0, 1, 'C');
         $pdf->SetFont('Times', 'B', 16);
-        $pdf->Cell(190, 7, 'ONE ADVERTISING', 0, 1, 'C');
+        $pdf->Cell(190, 7, 'IDI Cabang Brebes', 0, 1, 'C');
         $pdf->SetFont('Times', 'B', 8);
-        $pdf->Cell(190, 7, 'Jl. Kapten Pattimura, Rw. Sari, Kec. Kota Baru, Kota Jambi, Jambi 36361', 0, 1, 'C');
-       $pdf->Line(10,30,205,30);
+        $pdf->Line(10,30,205,30);
         $pdf->Ln(10);
 
         // $pdf->AddPage('P', 'Letter');
         $pdf->SetFont('Times', 'B', 16);
         $pdf->Cell(190, 7, 'Laporan ' . ucfirst($table), 0, 1, 'C');
         $pdf->SetFont('Times', '', 10);
-        $pdf->Cell(190, 4, 'Tanggal : ' . $tanggal, 0, 1, 'C');
+        $pdf->Cell(190, 4, 'Periode : ' . $tanggal, 0, 1, 'C');
         $pdf->Ln(10);
 
         $pdf->SetFont('Arial', 'B', 10);
@@ -56,7 +55,7 @@ class Laporan extends CI_Controller
             $pdf->Cell(25, 7, 'Tanggal', 1, 0, 'C');
             $pdf->Cell(85, 7, 'Catatan', 1, 0, 'C');
             $pdf->Cell(45, 7, 'Jumlah', 1, 0, 'C');
-            $pdf->Cell(30, 7, 'Status', 1, 0, 'C');
+            // $pdf->Cell(30, 7, 'Status', 1, 0, 'C');
             $pdf->Ln();
 
             $no = 1;
@@ -66,7 +65,7 @@ class Laporan extends CI_Controller
                 $pdf->Cell(25, 7, $d->tanggal, 1, 0, 'C');
                 $pdf->Cell(85, 7, $d->catatan, 1, 0, 'L');
                 $pdf->Cell(45, 7,"Rp. " . number_format($d->jumlah), 1, 0, 'L');
-                $pdf->Cell(30, 7, $d->status, 1, 0, 'C');
+                // $pdf->Cell(30, 7, $d->status, 1, 0, 'C');
                 $pdf->Ln();
                 $total += $d->jumlah;
             }

@@ -17,7 +17,7 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="<?= base_url() ?>assets/vendor/bootstrap/css/bootstrap.min.css">
 
-	<title>One Advertising aaa</title>
+	<title>SI-Kas IDI</title>
 	<style>
 		@media (max-width: 575.98px) {
 			.img-carousel{

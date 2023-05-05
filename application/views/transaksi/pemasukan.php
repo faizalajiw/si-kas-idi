@@ -28,17 +28,17 @@
 										class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
 										Tanggal</th>
 									<th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-										Catatan
+										Keterangan
 									</th>
 									<th
 										class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
 										Jumlah Pemasukan</th>
+									<!-- <th
+										class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+										User</th> -->
 									<th
 										class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-										User</th>
-									<th
-										class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-										Status</th>
+										Kategori</th>
 									<th class="text-secondary opacity-7"></th>
 								</tr>
 							</thead>
@@ -47,34 +47,26 @@
 								<tr>
 									<td class="align-middle text-center">
 										<span
-											class="text-secondary text-xs font-weight-bold"><?= $row->tanggal ?></span>
+											class="text-secondary text-sm font-weight-bold"><?= $row->tanggal ?></span>
 									</td>
 									<td>
-										<p class="text-xs text-secondary mb-0"><?= $row->catatan ?></p>
+										<p class="text-sm text-secondary mb-0"><?= $row->catatan ?></p>
 									</td>
 									<td>
-										<p class="text-xs font-weight-bold mb-0">Rp. <?= number_format($row->jumlah) ?>
+										<p class="text-sm font-weight-bold mb-0">Rp. <?= number_format($row->jumlah) ?>
 										</p>
 									</td>
-									<td>
-										<p class="text-xs text-secondary mb-0"><?= $row->nama ?></p>
-									</td>
+									<!-- <td>
+										<p class="text-sm text-secondary mb-0"><?= $row->nama ?></p>
+									</td> -->
 									<td class="align-middle text-center text-sm">
-										<span
-											class="badge badge-sm <?= ($row->status == 'selesai') ? 'bg-gradient-success' : 'bg-gradient-secondary' ?>">
-											<?php if($row->status == 'selesai'): ?>
+										<span>
 											<?= $row->status ?>
-											<?php else : ?>
-											<a href="<?= base_url('transaksi/selesai/').$row->id_pemasukan ?>"
-												class="text-white">
-												<?= $row->status ?>
-											</a>
-											<?php endif ?>
 										</span>
 									</td>
 									<td class="align-middle">
 										<a href="<?= base_url('transaksi/pemasukan_hapus/').$row->id_pemasukan ?>"
-											onclick="return confirm('Hapus ?')"
+											onclick="return confirm('Apakah anda yakin menghapus data?')"
 											class="text-secondary text-danger font-weight-bold text-xs">
 											<i class="material-icons opacity-10" translate="no">delete
 											</i>
@@ -113,7 +105,7 @@
 						</div>
 					</div>
 					<div class="row my-3">
-						<label>Catatan</label>
+						<label>Keterangan</label>
 						<div class="input-group input-group-outline">
 							<textarea name="catatan" id="textarea" class="form-control" cols="10" rows="3"></textarea>
 						</div>
@@ -126,8 +118,8 @@
 					</div>
 					<div class="row my-3">
 						<div class="input-group input-group-outline">
-							<select class="form-control" name="status" required>
-								<option value="">Pilih Status</option>
+							<select class="form-control" name="status">
+								<option value="">Pilih Kategori</option>
 								<option value="selesai">Selesai</option>
 								<option value="pending">Pending</option>
 							</select>

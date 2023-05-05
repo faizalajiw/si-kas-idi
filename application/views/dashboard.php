@@ -9,13 +9,15 @@
 					</div>
 					<div class="text-end pt-1">
 						<p class="text-sm mb-0 text-capitalize">Pendapatan Hari Ini</p>
-						<h4 class="mb-0">Rp. <?= number_format($pendapatan['pendapatan_sekarang']) ?></h4>
+						<h4 class="mb-0">Rp.
+							<?= number_format($pendapatan['pendapatan_sekarang']) ?>
+						</h4>
 					</div>
 				</div>
 				<hr class="dark horizontal my-0">
 				<div class="card-footer p-3">
 					<p class="mb-0"><span
-							class="<?= ($pendapatan['persentase_pendapatan_sekarang'] >= 0) ? 'text-success' : 'text-danger' ?> text-sm font-weight-bolder"><?= ($pendapatan['persentase_pendapatan_sekarang'] >= 0) ? "+" : ""?><?=$pendapatan['persentase_pendapatan_sekarang'] ?>%
+							class="<?= ($pendapatan['persentase_pendapatan_sekarang'] >= 0) ? 'text-success' : 'text-danger' ?> text-sm font-weight-bolder"><?= ($pendapatan['persentase_pendapatan_sekarang'] >= 0) ? "+" : "" ?><?= $pendapatan['persentase_pendapatan_sekarang'] ?>%
 						</span>dari kemarin</p>
 				</div>
 			</div>
@@ -29,13 +31,15 @@
 					</div>
 					<div class="text-end pt-1">
 						<p class="text-sm mb-0 text-capitalize">Pengeluaran Hari Ini</p>
-						<h4 class="mb-0">Rp. <?= number_format($pengeluaran['pengeluaran_sekarang']) ?></h4>
+						<h4 class="mb-0">Rp.
+							<?= number_format($pengeluaran['pengeluaran_sekarang']) ?>
+						</h4>
 					</div>
 				</div>
 				<hr class="dark horizontal my-0">
 				<div class="card-footer p-3">
 					<p class="mb-0"><span
-							class="<?= ($pengeluaran['persentase_pengeluaran_sekarang'] >= 0) ? 'text-success' : 'text-danger' ?> text-sm font-weight-bolder"><?= ($pengeluaran['persentase_pengeluaran_sekarang'] >= 0) ? "+" : ""?><?=$pengeluaran['persentase_pengeluaran_sekarang'] ?>%
+							class="<?= ($pengeluaran['persentase_pengeluaran_sekarang'] >= 0) ? 'text-success' : 'text-danger' ?> text-sm font-weight-bolder"><?= ($pengeluaran['persentase_pengeluaran_sekarang'] >= 0) ? "+" : "" ?><?= $pengeluaran['persentase_pengeluaran_sekarang'] ?>%
 						</span>dari kemarin</p>
 				</div>
 			</div>
@@ -49,13 +53,15 @@
 					</div>
 					<div class="text-end pt-1">
 						<p class="text-sm mb-0 text-capitalize">Transaksi Hari Ini</p>
-						<h4 class="mb-0"><?= number_format($transaksi['transaksi_sekarang']) ?></h4>
+						<h4 class="mb-0">
+							<?= number_format($transaksi['transaksi_sekarang']) ?>
+						</h4>
 					</div>
 				</div>
 				<hr class="dark horizontal my-0">
 				<div class="card-footer p-3">
 					<p class="mb-0"><span
-							class="<?= ($transaksi['persentase_transaksi_sekarang'] >= 0) ? 'text-success' : 'text-danger' ?> text-sm font-weight-bolder"><?= ($transaksi['persentase_transaksi_sekarang'] >= 0) ? "+" : ""?><?=$transaksi['persentase_transaksi_sekarang'] ?>%
+							class="<?= ($transaksi['persentase_transaksi_sekarang'] >= 0) ? 'text-success' : 'text-danger' ?> text-sm font-weight-bolder"><?= ($transaksi['persentase_transaksi_sekarang'] >= 0) ? "+" : "" ?><?= $transaksi['persentase_transaksi_sekarang'] ?>%
 						</span> dari kemarin</p>
 				</div>
 			</div>
@@ -69,7 +75,9 @@
 					</div>
 					<div class="text-end pt-1">
 						<p class="text-sm mb-0 text-capitalize">Pending</p>
-						<h4 class="mb-0"><?= number_format($pending) ?></h4>
+						<h4 class="mb-0">
+							<?= number_format($pending) ?>
+						</h4>
 					</div>
 				</div>
 				<hr class="dark horizontal my-0">
@@ -89,13 +97,15 @@
 					</div>
 					<div class="text-end pt-1">
 						<p class="text-sm mb-0 text-capitalize">Pendapatan Bulan Ini</p>
-						<h4 class="mb-0">Rp. <?= number_format($pendapatan['pendapatan_perbulan']) ?></h4>
+						<h4 class="mb-0">Rp.
+							<?= number_format($pendapatan['pendapatan_perbulan']) ?>
+						</h4>
 					</div>
 				</div>
 				<hr class="dark horizontal my-0">
 				<div class="card-footer p-3">
 					<p class="mb-0"><span
-							class="<?= ($pendapatan['persentase_pendapatan_bulan'] >= 0) ? 'text-success' : 'text-danger' ?> text-sm font-weight-bolder"><?= ($pendapatan['persentase_pendapatan_bulan'] >= 0) ? "+" : ""?><?=$pendapatan['persentase_pendapatan_bulan'] ?>%
+							class="<?= ($pendapatan['persentase_pendapatan_bulan'] >= 0) ? 'text-success' : 'text-danger' ?> text-sm font-weight-bolder"><?= ($pendapatan['persentase_pendapatan_bulan'] >= 0) ? "+" : "" ?><?= $pendapatan['persentase_pendapatan_bulan'] ?>%
 						</span>dari bulan lalu</p>
 				</div>
 			</div>
@@ -109,13 +119,15 @@
 					</div>
 					<div class="text-end pt-1">
 						<p class="text-sm mb-0 text-capitalize">Pengeluaran Bulan Ini</p>
-						<h4 class="mb-0">Rp. <?= number_format($pengeluaran['pengeluaran_perbulan']) ?></h4>
+						<h4 class="mb-0">Rp.
+							<?= number_format($pengeluaran['pengeluaran_perbulan']) ?>
+						</h4>
 					</div>
 				</div>
 				<hr class="dark horizontal my-0">
 				<div class="card-footer p-3">
 					<p class="mb-0"><span
-							class="<?= ($pengeluaran['persentase_pengeluaran_bulan'] >= 0) ? 'text-success' : 'text-danger' ?> text-sm font-weight-bolder"><?= ($pengeluaran['persentase_pengeluaran_bulan'] >= 0) ? "+" : ""?><?=$pengeluaran['persentase_pengeluaran_bulan'] ?>%
+							class="<?= ($pengeluaran['persentase_pengeluaran_bulan'] >= 0) ? 'text-success' : 'text-danger' ?> text-sm font-weight-bolder"><?= ($pengeluaran['persentase_pengeluaran_bulan'] >= 0) ? "+" : "" ?><?= $pengeluaran['persentase_pengeluaran_bulan'] ?>%
 						</span>dari bulan lalu</p>
 				</div>
 			</div>
@@ -129,13 +141,15 @@
 					</div>
 					<div class="text-end pt-1">
 						<p class="text-sm mb-0 text-capitalize">Transaksi Bulan Ini</p>
-						<h4 class="mb-0"><?= number_format($transaksi['transaksi_perbulan']) ?></h4>
+						<h4 class="mb-0">
+							<?= number_format($transaksi['transaksi_perbulan']) ?>
+						</h4>
 					</div>
 				</div>
 				<hr class="dark horizontal my-0">
 				<div class="card-footer p-3">
 					<p class="mb-0"><span
-							class="<?= ($transaksi['persentase_transaksi_bulan'] >= 0) ? 'text-success' : 'text-danger' ?> text-sm font-weight-bolder"><?= ($transaksi['persentase_transaksi_bulan'] >= 0) ? "+" : ""?><?=$transaksi['persentase_transaksi_bulan'] ?>%</span>
+							class="<?= ($transaksi['persentase_transaksi_bulan'] >= 0) ? 'text-success' : 'text-danger' ?> text-sm font-weight-bolder"><?= ($transaksi['persentase_transaksi_bulan'] >= 0) ? "+" : "" ?><?= $transaksi['persentase_transaksi_bulan'] ?>%</span>
 						dari Bulan lalu</p>
 				</div>
 			</div>
@@ -149,7 +163,9 @@
 					</div>
 					<div class="text-end pt-1">
 						<p class="text-sm mb-0 text-capitalize">Pengguna</p>
-						<h4 class="mb-0"><?= number_format($pengguna) ?></h4>
+						<h4 class="mb-0">
+							<?= number_format($pengguna) ?>
+						</h4>
 					</div>
 				</div>
 				<hr class="dark horizontal my-0">
@@ -170,7 +186,9 @@
 					</div>
 				</div>
 				<div class="card-body">
-					<h6 class="mb-0 ">Pendapatan Perbulan Tahun <?= date('Y') ?></h6>
+					<h6 class="mb-0 ">Pendapatan Perbulan Tahun
+						<?= date('Y') ?>
+					</h6>
 				</div>
 			</div>
 		</div>
@@ -184,7 +202,9 @@
 					</div>
 				</div>
 				<div class="card-body">
-					<h6 class="mb-0 "> Pengeluaran Perbulan Tahun <?= date('Y') ?> </h6>
+					<h6 class="mb-0 "> Pengeluaran Perbulan Tahun
+						<?= date('Y') ?>
+					</h6>
 				</div>
 			</div>
 		</div>
@@ -198,7 +218,9 @@
 					</div>
 				</div>
 				<div class="card-body">
-					<h6 class="mb-0 ">Transaksi Perbulan Tahun <?= date('Y') ?></h6>
+					<h6 class="mb-0 ">Transaksi Perbulan Tahun
+						<?= date('Y') ?>
+					</h6>
 				</div>
 			</div>
 		</div>
@@ -215,51 +237,49 @@
 					<table class="table align-items-center mb-0">
 						<thead>
 							<tr>
-								<th
-									class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-									Status</th>
-								<th
-									class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-									Tanggal</th>
-								<th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-									Catatan
+								<th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
+									Tanggal
 								</th>
-								<th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+								<th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
+									Keterangan
+								</th>
+								<th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 ps-2">
 									Jumlah Pemasukan</th>
 								<th
-									class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-									User</th>
+									class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
+									Status</th>
+								<!-- <th
+									class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
+									User</th> -->
 							</tr>
 						</thead>
 						<tbody>
-							<?php foreach($pemasukan_terbaru as $row) : ?>
-							<tr>
-								<td class="align-middle text-center text-sm">
-									<span
-										class="badge badge-sm <?= ($row->status == 'selesai') ? 'bg-gradient-success' : 'bg-gradient-secondary' ?>">
-										<?php if($row->status == 'selesai'): ?>
-										<?= $row->status ?>
-										<?php else : ?>
-										<a href="<?= base_url('transaksi/selesai/').$row->id_pemasukan ?>"
-											class="text-white">
+							<?php foreach ($pemasukan_terbaru as $row): ?>
+								<tr>	
+									<td class="align-middle text-center">
+										<span class="text-secondary text-xs font-weight-bold">
+											<?= $row->tanggal ?>
+										</span>
+									</td>
+									<td>
+										<p class="text-xs text-secondary mb-0">
+											<?= $row->catatan ?>
+										</p>
+									</td>
+									<td>
+										<p class="text-xs font-weight-bold mb-0">Rp.
+											<?= number_format($row->jumlah) ?>
+										</p>
+									</td>
+									<td class="align-middle text-center text-sm">
+										<span>
 											<?= $row->status ?>
-										</a>
-										<?php endif ?>
-									</span>
-								</td>
-								<td class="align-middle text-center">
-									<span class="text-secondary text-xs font-weight-bold"><?= $row->tanggal ?></span>
-								</td>
-								<td>
-									<p class="text-xs text-secondary mb-0"><?= $row->catatan ?></p>
-								</td>
-								<td>
-									<p class="text-xs font-weight-bold mb-0">Rp. <?= number_format($row->jumlah) ?></p>
-								</td>
-								<td>
+										</span>
+									</td>
+									<!-- <td>
 									<p class="text-xs text-secondary mb-0"><?= $row->nama ?></p>
-								</td>
-							</tr>
+								</td> -->
+								</tr>
 							<?php endforeach ?>
 						</tbody>
 					</table>
@@ -280,34 +300,48 @@
 						<thead>
 							<tr>
 								<th
-									class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+									class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
 									Tanggal</th>
-								<th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-									Catatan
+								<th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
+									Keterangan
 								</th>
-								<th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+								<th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 ps-2">
 									Jumlah Pengeluaran</th>
 								<th
-									class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-									User</th>
+									class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
+									Status</th>
+								<!-- <th
+									class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
+									User</th> -->
 							</tr>
 						</thead>
 						<tbody>
-							<?php foreach($pengeluaran_terbaru as $row) : ?>
-							<tr>
-								<td class="align-middle text-center">
-									<span class="text-secondary text-xs font-weight-bold"><?= $row->tanggal ?></span>
-								</td>
-								<td>
-									<p class="text-xs text-secondary mb-0"><?= $row->catatan ?></p>
-								</td>
-								<td>
-									<p class="text-xs font-weight-bold mb-0">Rp. <?= number_format($row->jumlah) ?></p>
-								</td>
-								<td>
+							<?php foreach ($pengeluaran_terbaru as $row): ?>
+								<tr>
+									<td class="align-middle text-center">
+										<span class="text-secondary text-xs font-weight-bold">
+											<?= $row->tanggal ?>
+										</span>
+									</td>
+									<td>
+										<p class="text-xs text-secondary mb-0">
+											<?= $row->catatan ?>
+										</p>
+									</td>
+									<td>
+										<p class="text-xs font-weight-bold mb-0">Rp.
+											<?= number_format($row->jumlah) ?>
+										</p>
+									</td>
+									<td class="align-middle text-center text-sm">
+										<span>
+											<?= $row->status ?>
+										</span>
+									</td>
+									<!-- <td>
 									<p class="text-xs text-secondary mb-0"><?= $row->nama ?></p>
-								</td>
-							</tr>
+								</td> -->
+								</tr>
 							<?php endforeach ?>
 						</tbody>
 					</table>
@@ -338,7 +372,7 @@
 					borderWidth: 4,
 					backgroundColor: "transparent",
 					fill: true,
-					data: <?= json_encode($chart['cpdt']) ?> ,
+					data: <?= json_encode($chart['cpdt']) ?>,
 					maxBarThickness: 6
 
 				}],
@@ -421,7 +455,7 @@
 					borderWidth: 4,
 					backgroundColor: "transparent",
 					fill: true,
-					data: <?= json_encode($chart['cpgt']) ?> ,
+					data: <?= json_encode($chart['cpgt']) ?>,
 					maxBarThickness: 6
 
 				}],
@@ -500,9 +534,9 @@
 					borderRadius: 4,
 					borderSkipped: false,
 					backgroundColor: "rgba(255, 255, 255, .8)",
-					data: <?= json_encode($chart['ctt']) ?> ,
+					data: <?= json_encode($chart['ctt']) ?>,
 					maxBarThickness: 6
-				}, ],
+				},],
 			},
 			options: {
 				responsive: true,
