@@ -39,6 +39,29 @@
 					<span class="nav-link-text ms-1">Pengeluaran</span>
 				</a>
 			</li>
+
+			<!-- KATEGORI -->
+            <li class="nav-item mt-3">
+				<h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Kategori</h6>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link text-white <?php if($this->uri->segment(2) == 'kategori_pemasukan') echo 'active bg-gradient-primary' ?>" href="<?= base_url('kategori/kategori_pemasukan') ?>">
+					<div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+						<i class="material-icons opacity-10" translate="no">table_view</i>
+					</div>
+					<span class="nav-link-text ms-1" >Kategori Pemasukan</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link text-white <?php if($this->uri->segment(2) == 'kategori_pengeluaran') echo 'active bg-gradient-primary' ?>" href="<?= base_url('kategori/kategori_pengeluaran') ?>">
+					<div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+						<i class="material-icons opacity-10" translate="no">receipt_long</i>
+					</div>
+					<span class="nav-link-text ms-1">Kategori Pengeluaran</span>
+				</a>
+			</li>
+			<!-- END KATEGORI -->
+
 			<li class="nav-item mt-3">
 				<h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Laporan</h6>
 			</li>
