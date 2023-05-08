@@ -120,8 +120,10 @@
 						<div class="input-group input-group-outline">
 							<select class="form-control" name="status">
 								<option value="">Pilih Kategori</option>
-								<option value="selesai">Selesai</option>
-								<option value="pending">Pending</option>
+								<option value="Iuran IDI, Hibah">Iuran IDI, Hibah</option>
+								<option value="Sewa Gedung">Sewa Gedung</option>
+								<option value="Sponsor">Sponsor</option>
+								<option value="Iuran P2KB">Iuran P2KB</option>
 							</select>
 						</div>
 					</div>

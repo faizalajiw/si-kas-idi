@@ -117,8 +117,18 @@
 						<div class="input-group input-group-outline">
 							<select class="form-control" name="status">
 								<option value="">Pilih Kategori</option>
-								<option value="selesai">Selesai</option>
-								<option value="pending">Pending</option>
+								<option value="Rutin Geudng">Rutin Geudng</option>
+								<option value="Honor Pegawai IDI">Honor Pegawai IDI</option>
+								<option value="Transport Perjalanan Dinas">Transport Perjalanan Dinas</option>
+								<option value="Pembangunan Gedung">Pembangunan Gedung</option>
+								<option value="Pemeliharaan Gedung">Pemeliharaan Gedung</option>
+								<option value="Kegiatan IDI">Kegiatan IDI</option>
+								<option value="Sosial (Tahziyah), THR">Sosial (Tahziyah), THR</option>
+								<option value="Iuran IDI Wilayah">Iuran IDI Wilayah</option>
+								<option value="ATK">ATK</option>
+								<option value="Iklan HUT Brebes">Iklan HUT Brebes</option>
+								<option value="Uang P2KB">Uang P2KB</option>
+								<option value="Dana Sosial">Dana Sosial</option>
 							</select>
 						</div>
 					</div>

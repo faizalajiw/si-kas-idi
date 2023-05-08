@@ -36,14 +36,14 @@ class Laporan extends CI_Controller
         $pdf->SetFont('Times', 'B', 16);
         $pdf->Cell(190, 7, 'IDI Cabang Brebes', 0, 1, 'C');
         $pdf->SetFont('Times', 'B', 8);
-        $pdf->Line(10,30,205,30);
+        // $pdf->Line(10,30,205,30);
         $pdf->Ln(10);
 
         // $pdf->AddPage('P', 'Letter');
-        $pdf->SetFont('Times', 'B', 16);
-        $pdf->Cell(190, 7, 'Laporan ' . ucfirst($table), 0, 1, 'C');
+        $pdf->SetFont('Times', 'B', 13);
+        $pdf->Cell(190, 1, 'Laporan ' . ucfirst($table), 0, 1, 'C');
         $pdf->SetFont('Times', '', 10);
-        $pdf->Cell(190, 4, 'Periode : ' . $tanggal, 0, 1, 'C');
+        $pdf->Cell(190, 10, 'Periode : ' . $tanggal, 0, 1, 'C');
         $pdf->Ln(10);
 
         $pdf->SetFont('Arial', 'B', 10);

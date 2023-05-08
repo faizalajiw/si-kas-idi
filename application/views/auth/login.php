@@ -38,12 +38,12 @@
 								<form role="form" class="text-start" action="<?= base_url('auth/proses') ?>"
 									method="post">
 									<div class="input-group input-group-outline my-3">
-										<label class="form-label">Username</label>
-										<input type="text" name="username" required class="form-control">
+										<!-- <label class="form-label">Username</label> -->
+										<input type="text" name="username" required class="form-control" placeholder="username">
 									</div>
 									<div class="input-group input-group-outline mb-3">
-										<label class="form-label">Password</label>
-										<input type="password" name="password" required class="form-control">
+										<!-- <label class="form-label">Password</label> -->
+										<input type="password" name="password" required class="form-control" placeholder="password">
 									</div>
 									<div class="form-check form-switch d-flex align-items-center mb-3">
 										<input class="form-check-input" name="rememberMe" type="checkbox"
