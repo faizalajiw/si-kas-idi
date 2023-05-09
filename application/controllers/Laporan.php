@@ -53,7 +53,7 @@ class Laporan extends CI_Controller
             
             $pdf->Cell(10, 7, 'No.', 1, 0, 'C');
             $pdf->Cell(25, 7, 'Tanggal', 1, 0, 'C');
-            $pdf->Cell(85, 7, 'Catatan', 1, 0, 'C');
+            $pdf->Cell(85, 7, 'Keterangan', 1, 0, 'C');
             $pdf->Cell(45, 7, 'Jumlah', 1, 0, 'C');
             // $pdf->Cell(30, 7, 'Status', 1, 0, 'C');
             $pdf->Ln();
@@ -76,7 +76,7 @@ class Laporan extends CI_Controller
             $pdf->Cell(10, 7, '', 0, 0, 'C');
             $pdf->Cell(10, 7, 'No.', 1, 0, 'C');
             $pdf->Cell(25, 7, 'Tanggal', 1, 0, 'C');
-            $pdf->Cell(85, 7, 'Catatan', 1, 0, 'C');
+            $pdf->Cell(85, 7, 'Keterangan', 1, 0, 'C');
             $pdf->Cell(55, 7, 'Jumlah', 1, 0, 'C');
             $pdf->Ln();
 
