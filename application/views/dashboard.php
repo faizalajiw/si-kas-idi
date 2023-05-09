@@ -1,6 +1,6 @@
 <div class="container-fluid py-4">
 	<div class="row">
-		<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+		<div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
 			<div class="card">
 				<div class="card-header p-3 pt-2">
 					<div
@@ -22,7 +22,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+		<div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
 			<div class="card">
 				<div class="card-header p-3 pt-2">
 					<div
@@ -44,7 +44,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+		<div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
 			<div class="card">
 				<div class="card-header p-3 pt-2">
 					<div
@@ -66,7 +66,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-xl-3 col-sm-6">
+		<!-- <div class="col-xl-3 col-sm-6">
 			<div class="card">
 				<div class="card-header p-3 pt-2">
 					<div
@@ -85,10 +85,10 @@
 					<p class="mb-0"><span class="text-success text-sm font-weight-bolder">&nbsp</span></p>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 	<div class="row mt-4">
-		<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+		<div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
 			<div class="card">
 				<div class="card-header p-3 pt-2">
 					<div
@@ -110,7 +110,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+		<div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
 			<div class="card">
 				<div class="card-header p-3 pt-2">
 					<div
@@ -132,7 +132,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+		<div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
 			<div class="card">
 				<div class="card-header p-3 pt-2">
 					<div
@@ -154,7 +154,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-xl-3 col-sm-6">
+		<!-- <div class="col-xl-3 col-sm-6">
 			<div class="card">
 				<div class="card-header p-3 pt-2">
 					<div
@@ -173,7 +173,7 @@
 					<p class="mb-0"><span class="text-success text-sm font-weight-bolder">&nbsp</span></p>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 	<div class="row mt-4">
 		<div class="col-lg-4 col-md-6 mt-4 mb-4">

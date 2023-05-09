@@ -62,14 +62,14 @@
 					<span class="nav-link-text ms-1">User Management</span>
 				</a>
 			</li>
-			<li class="nav-item">
+			<!-- <li class="nav-item">
 				<a class="nav-link text-white <?php if($this->uri->segment(1) == 'homepage') echo 'active bg-gradient-primary' ?>" href="<?= base_url('homepage') ?>">
 					<div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
 						<i class="material-icons opacity-10" translate="no">home</i>
 					</div>
 					<span class="nav-link-text ms-1">Halaman Beranda</span>
 				</a>
-			</li>
+			</li> -->
 			<?php endif ?>
 		</ul>
 	</div>
