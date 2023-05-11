@@ -247,7 +247,7 @@
 									Jumlah Pemasukan</th>
 								<th
 									class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
-									Status</th>
+									Kategori</th>
 								<!-- <th
 									class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
 									User</th> -->
@@ -309,7 +309,7 @@
 									Jumlah Pengeluaran</th>
 								<th
 									class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
-									Status</th>
+									Kategori</th>
 								<!-- <th
 									class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
 									User</th> -->
