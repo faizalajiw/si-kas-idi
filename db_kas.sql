@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Bulan Mei 2023 pada 16.30
--- Versi server: 10.4.22-MariaDB
--- Versi PHP: 7.3.33
+-- Generation Time: May 12, 2023 at 06:28 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.0.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,17 +24,17 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `banner`
+-- Table structure for table `banner`
 --
 
 CREATE TABLE `banner` (
   `id_banner` int(11) NOT NULL,
   `tanggal` date NOT NULL,
   `banner` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `banner`
+-- Dumping data for table `banner`
 --
 
 INSERT INTO `banner` (`id_banner`, `tanggal`, `banner`) VALUES
@@ -45,17 +45,17 @@ INSERT INTO `banner` (`id_banner`, `tanggal`, `banner`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `galeri`
+-- Table structure for table `galeri`
 --
 
 CREATE TABLE `galeri` (
   `id` int(11) NOT NULL,
   `gambar` varchar(100) NOT NULL,
   `tanggal` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `galeri`
+-- Dumping data for table `galeri`
 --
 
 INSERT INTO `galeri` (`id`, `gambar`, `tanggal`) VALUES
@@ -71,7 +71,7 @@ INSERT INTO `galeri` (`id`, `gambar`, `tanggal`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `home`
+-- Table structure for table `home`
 --
 
 CREATE TABLE `home` (
@@ -80,10 +80,10 @@ CREATE TABLE `home` (
   `slogan` text NOT NULL,
   `alamat` varchar(100) NOT NULL,
   `kontak` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `home`
+-- Dumping data for table `home`
 --
 
 INSERT INTO `home` (`id`, `judul`, `slogan`, `alamat`, `kontak`) VALUES
@@ -92,17 +92,17 @@ INSERT INTO `home` (`id`, `judul`, `slogan`, `alamat`, `kontak`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `jam_buka`
+-- Table structure for table `jam_buka`
 --
 
 CREATE TABLE `jam_buka` (
   `id` int(11) NOT NULL,
   `hari` varchar(10) NOT NULL,
   `jam` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `jam_buka`
+-- Dumping data for table `jam_buka`
 --
 
 INSERT INTO `jam_buka` (`id`, `hari`, `jam`) VALUES
@@ -117,17 +117,44 @@ INSERT INTO `jam_buka` (`id`, `hari`, `jam`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `layanan`
+-- Table structure for table `kas`
+--
+
+CREATE TABLE `kas` (
+  `id` int(11) NOT NULL,
+  `tanggal` date NOT NULL,
+  `kategori` varchar(100) NOT NULL,
+  `keterangan` text NOT NULL,
+  `jumlah_masuk` int(11) NOT NULL,
+  `jumlah_keluar` int(11) NOT NULL,
+  `jenis` enum('masuk','keluar') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `kas`
+--
+
+INSERT INTO `kas` (`id`, `tanggal`, `kategori`, `keterangan`, `jumlah_masuk`, `jumlah_keluar`, `jenis`) VALUES
+(1, '2023-05-12', 'Iuran P2KB', '', 500000, 0, 'masuk'),
+(2, '2023-05-13', 'Sosial (Tahziyah), THR', '', 0, 100000, 'keluar'),
+(3, '2023-05-13', 'Iuran IDI, Hibah', '', 2500000, 0, 'masuk'),
+(4, '2023-05-13', 'ATK', '', 0, 300000, 'keluar'),
+(5, '2023-05-14', 'Kegiatan IDI', '', 0, 500000, 'keluar');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `layanan`
 --
 
 CREATE TABLE `layanan` (
   `id` int(11) NOT NULL,
   `nama` varchar(50) NOT NULL,
   `gambar` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `layanan`
+-- Dumping data for table `layanan`
 --
 
 INSERT INTO `layanan` (`id`, `nama`, `gambar`) VALUES
@@ -143,7 +170,7 @@ INSERT INTO `layanan` (`id`, `nama`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pemasukan`
+-- Table structure for table `pemasukan`
 --
 
 CREATE TABLE `pemasukan` (
@@ -153,10 +180,10 @@ CREATE TABLE `pemasukan` (
   `jumlah` int(11) NOT NULL,
   `user` varchar(30) NOT NULL,
   `status` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `pemasukan`
+-- Dumping data for table `pemasukan`
 --
 
 INSERT INTO `pemasukan` (`id`, `tanggal`, `catatan`, `jumlah`, `user`, `status`) VALUES
@@ -168,7 +195,7 @@ INSERT INTO `pemasukan` (`id`, `tanggal`, `catatan`, `jumlah`, `user`, `status`)
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pengeluaran`
+-- Table structure for table `pengeluaran`
 --
 
 CREATE TABLE `pengeluaran` (
@@ -178,10 +205,10 @@ CREATE TABLE `pengeluaran` (
   `jumlah` int(11) NOT NULL,
   `user` int(11) NOT NULL,
   `status` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `pengeluaran`
+-- Dumping data for table `pengeluaran`
 --
 
 INSERT INTO `pengeluaran` (`id`, `tanggal`, `catatan`, `jumlah`, `user`, `status`) VALUES
@@ -193,7 +220,7 @@ INSERT INTO `pengeluaran` (`id`, `tanggal`, `catatan`, `jumlah`, `user`, `status
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -207,10 +234,10 @@ CREATE TABLE `user` (
   `foto` varchar(255) NOT NULL,
   `role` enum('admin','pegawai','3') NOT NULL,
   `is_active` enum('0','1') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id_user`, `username`, `nama`, `email`, `no_telp`, `create_at`, `password`, `foto`, `role`, `is_active`) VALUES
@@ -223,101 +250,113 @@ INSERT INTO `user` (`id_user`, `username`, `nama`, `email`, `no_telp`, `create_a
 --
 
 --
--- Indeks untuk tabel `banner`
+-- Indexes for table `banner`
 --
 ALTER TABLE `banner`
   ADD PRIMARY KEY (`id_banner`);
 
 --
--- Indeks untuk tabel `galeri`
+-- Indexes for table `galeri`
 --
 ALTER TABLE `galeri`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `home`
+-- Indexes for table `home`
 --
 ALTER TABLE `home`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `jam_buka`
+-- Indexes for table `jam_buka`
 --
 ALTER TABLE `jam_buka`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `layanan`
+-- Indexes for table `kas`
+--
+ALTER TABLE `kas`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `layanan`
 --
 ALTER TABLE `layanan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `pemasukan`
+-- Indexes for table `pemasukan`
 --
 ALTER TABLE `pemasukan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `pengeluaran`
+-- Indexes for table `pengeluaran`
 --
 ALTER TABLE `pengeluaran`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `banner`
+-- AUTO_INCREMENT for table `banner`
 --
 ALTER TABLE `banner`
   MODIFY `id_banner` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT untuk tabel `galeri`
+-- AUTO_INCREMENT for table `galeri`
 --
 ALTER TABLE `galeri`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT untuk tabel `home`
+-- AUTO_INCREMENT for table `home`
 --
 ALTER TABLE `home`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT untuk tabel `jam_buka`
+-- AUTO_INCREMENT for table `jam_buka`
 --
 ALTER TABLE `jam_buka`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT untuk tabel `layanan`
+-- AUTO_INCREMENT for table `kas`
+--
+ALTER TABLE `kas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `layanan`
 --
 ALTER TABLE `layanan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT untuk tabel `pemasukan`
+-- AUTO_INCREMENT for table `pemasukan`
 --
 ALTER TABLE `pemasukan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT untuk tabel `pengeluaran`
+-- AUTO_INCREMENT for table `pengeluaran`
 --
 ALTER TABLE `pengeluaran`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT untuk tabel `user`
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
