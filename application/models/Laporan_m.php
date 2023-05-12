@@ -18,7 +18,7 @@ class Laporan_m extends CI_Model
     public function getPemasukan()
     {
         $this->db->join('user', 'id_user = user');
-        $this->db->order_by('id_pemasukan', 'DESC');
+        $this->db->order_by('id', 'DESC');
         $this->db->limit(5);
         return $this->db->get($this->pemasukan)->result();
     }
@@ -26,7 +26,7 @@ class Laporan_m extends CI_Model
     public function getPengeluaran()
     {
         $this->db->join('user', 'id_user = user');
-        $this->db->order_by('id_pengeluaran', 'DESC');
+        $this->db->order_by('id', 'DESC');
         $this->db->limit(5);
         return $this->db->get($this->pengeluaran)->result();
     }

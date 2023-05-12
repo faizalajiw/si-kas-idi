@@ -21,10 +21,10 @@
 				</a>
 			</li>
             <li class="nav-item mt-3">
-				<h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Transaksi</h6>
+				<h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">kas</h6>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link text-white <?php if($this->uri->segment(2) == 'pemasukan') echo 'active bg-gradient-primary' ?>" href="<?= base_url('transaksi/pemasukan') ?>">
+				<a class="nav-link text-white <?php if($this->uri->segment(2) == 'pemasukan') echo 'active bg-gradient-primary' ?>" href="<?= base_url('kas/pemasukan') ?>">
 					<div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
 						<i class="material-icons opacity-10" translate="no">table_view</i>
 					</div>
@@ -32,7 +32,7 @@
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link text-white <?php if($this->uri->segment(2) == 'pengeluaran') echo 'active bg-gradient-primary' ?>" href="<?= base_url('transaksi/pengeluaran') ?>">
+				<a class="nav-link text-white <?php if($this->uri->segment(2) == 'pengeluaran') echo 'active bg-gradient-primary' ?>" href="<?= base_url('kas/pengeluaran') ?>">
 					<div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
 						<i class="material-icons opacity-10" translate="no">receipt_long</i>
 					</div>
@@ -41,6 +41,14 @@
 			</li>
 			<li class="nav-item mt-3">
 				<h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Laporan</h6>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link text-white <?php if($this->uri->segment(1) == 'rekap') echo 'active bg-gradient-primary' ?>" href="<?= base_url('rekap') ?>">
+					<div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+					<i class="material-icons opacity-10" translate="no">receipt_long</i>
+					</div>
+					<span class="nav-link-text ms-1">Rekap Laporan</span>
+				</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link text-white <?php if($this->uri->segment(1) == 'laporan') echo 'active bg-gradient-primary' ?>" href="<?= base_url('laporan') ?>">

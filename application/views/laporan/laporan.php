@@ -10,13 +10,13 @@
 			<div class="card my-4">
 				<div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
 					<div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-						<h6 class="text-white text-capitalize ps-3">Laporan Transaksi</h6>
+						<h6 class="text-white text-capitalize ps-3">Laporan kas</h6>
 					</div>
 				</div>
 				<div class="card-body px-2 pb-2">
 					<form action="" method="post" target="_blank">
 						<div class="row">
-							<div class="col-sm-6 text-center">Laporan Transaksi</div>
+							<div class="col-sm-6 text-center">Laporan kas</div>
 							<div class="col-sm-6">
 								<div class="form-check">
 									<input class="form-check-input" type="radio" name="tabel"

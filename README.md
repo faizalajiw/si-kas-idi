@@ -1,4 +1,4 @@
-# Aplikasi Pengolahan Data Transaksi
+# Aplikasi Pengolahan Data kas
 Ini adalah aplikasi pengolahan data kas
 
 ## Dashboard Aplikasi

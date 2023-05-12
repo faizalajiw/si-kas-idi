@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 13 Nov 2021 pada 18.58
--- Versi server: 10.4.14-MariaDB
--- Versi PHP: 7.2.34
+-- Waktu pembuatan: 11 Bulan Mei 2023 pada 16.30
+-- Versi server: 10.4.22-MariaDB
+-- Versi PHP: 7.3.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `one`
+-- Database: `db_kas`
 --
 
 -- --------------------------------------------------------
@@ -147,13 +147,23 @@ INSERT INTO `layanan` (`id`, `nama`, `gambar`) VALUES
 --
 
 CREATE TABLE `pemasukan` (
-  `id_pemasukan` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `tanggal` date NOT NULL,
   `catatan` text NOT NULL,
   `jumlah` int(11) NOT NULL,
   `user` varchar(30) NOT NULL,
-  `status` enum('pending','selesai') NOT NULL
+  `status` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `pemasukan`
+--
+
+INSERT INTO `pemasukan` (`id`, `tanggal`, `catatan`, `jumlah`, `user`, `status`) VALUES
+(1, '2023-05-08', '', 5000000, '1', 'Iuran IDI, Hibah'),
+(2, '2023-05-01', '', 1000000, '1', 'Sewa Gedung'),
+(3, '2023-04-10', '', 3000000, '1', 'Sponsor'),
+(4, '2023-05-09', '', 10000000, '1', 'Sewa Gedung');
 
 -- --------------------------------------------------------
 
@@ -162,12 +172,23 @@ CREATE TABLE `pemasukan` (
 --
 
 CREATE TABLE `pengeluaran` (
-  `id_pengeluaran` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `tanggal` date NOT NULL,
   `catatan` text NOT NULL,
   `jumlah` int(11) NOT NULL,
-  `user` int(11) NOT NULL
+  `user` int(11) NOT NULL,
+  `status` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `pengeluaran`
+--
+
+INSERT INTO `pengeluaran` (`id`, `tanggal`, `catatan`, `jumlah`, `user`, `status`) VALUES
+(1, '2023-05-03', 'event', 500000, 1, ''),
+(2, '2023-05-05', 'acara', 500000, 1, 'selesai'),
+(3, '2023-05-08', '', 5000000, 1, 'Iklan HUT Brebes'),
+(4, '2023-05-10', '', 1000000, 1, 'Dana Sosial');
 
 -- --------------------------------------------------------
 
@@ -193,8 +214,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `username`, `nama`, `email`, `no_telp`, `create_at`, `password`, `foto`, `role`, `is_active`) VALUES
-(1, 'admin', 'adminnya w', 'admin@gmail.com', '082389324', 1636668594, '123', 'team-4.jpg', 'admin', '1'),
-(2, 'popo', 'popo', 'popo@gmail.com', '082389324', 1636668594, '123', 'team-5.jpg', 'pegawai', '1');
+(1, 'admin', 'admin', 'admin@gmail.com', '082389324', 1636668594, '123', 'profil-2305091683599823.png', 'admin', '1'),
+(2, 'popo', 'popo', 'popo@gmail.com', '082389324', 1636668594, '123', 'team-5.jpg', 'pegawai', '1'),
+(3, 'admin1', 'Elang Bimantoro', 'partofelang@gmail.com', '134', 1683310923, 'admin', '', 'admin', '1');
 
 --
 -- Indexes for dumped tables
@@ -234,13 +256,13 @@ ALTER TABLE `layanan`
 -- Indeks untuk tabel `pemasukan`
 --
 ALTER TABLE `pemasukan`
-  ADD PRIMARY KEY (`id_pemasukan`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `pengeluaran`
 --
 ALTER TABLE `pengeluaran`
-  ADD PRIMARY KEY (`id_pengeluaran`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `user`
@@ -286,19 +308,19 @@ ALTER TABLE `layanan`
 -- AUTO_INCREMENT untuk tabel `pemasukan`
 --
 ALTER TABLE `pemasukan`
-  MODIFY `id_pemasukan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT untuk tabel `pengeluaran`
 --
 ALTER TABLE `pengeluaran`
-  MODIFY `id_pengeluaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
