@@ -240,14 +240,16 @@
 								<th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
 									Tanggal
 								</th>
+								<th
+									class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
+									Kategori
+								</th>
 								<th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
 									Keterangan
 								</th>
 								<th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 ps-2">
-									Jumlah Pemasukan</th>
-								<th
-									class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
-									Kategori</th>
+									Jumlah Pemasukan
+								</th>
 								<!-- <th
 									class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
 									User</th> -->
@@ -261,20 +263,20 @@
 											<?= $row->tanggal ?>
 										</span>
 									</td>
+									<td class="align-middle text-center text-sm">
+										<span>
+											<?= $row->kategori ?>
+										</span>
+									</td>
 									<td>
 										<p class="text-xs text-secondary mb-0">
-											<?= $row->catatan ?>
+											<?= $row->keterangan ?>
 										</p>
 									</td>
 									<td>
 										<p class="text-xs font-weight-bold mb-0">Rp.
-											<?= number_format($row->jumlah) ?>
+											<?= number_format($row->jumlah_masuk) ?>
 										</p>
-									</td>
-									<td class="align-middle text-center text-sm">
-										<span>
-											<?= $row->status ?>
-										</span>
 									</td>
 									<!-- <td>
 									<p class="text-xs text-secondary mb-0"><?= $row->nama ?></p>
@@ -301,15 +303,18 @@
 							<tr>
 								<th
 									class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
-									Tanggal</th>
+									Tanggal
+								</th>
+								<th
+									class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
+									Kategori
+								</th>
 								<th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
 									Keterangan
 								</th>
 								<th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 ps-2">
-									Jumlah Pengeluaran</th>
-								<th
-									class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
-									Kategori</th>
+									Jumlah Pengeluaran
+								</th>
 								<!-- <th
 									class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
 									User</th> -->
@@ -323,20 +328,20 @@
 											<?= $row->tanggal ?>
 										</span>
 									</td>
+									<td class="align-middle text-center text-sm">
+										<span>
+											<?= $row->kategori ?>
+										</span>
+									</td>
 									<td>
 										<p class="text-xs text-secondary mb-0">
-											<?= $row->catatan ?>
+											<?= $row->keterangan ?>
 										</p>
 									</td>
 									<td>
 										<p class="text-xs font-weight-bold mb-0">Rp.
-											<?= number_format($row->jumlah) ?>
+											<?= number_format($row->jumlah_keluar) ?>
 										</p>
-									</td>
-									<td class="align-middle text-center text-sm">
-										<span>
-											<?= $row->status ?>
-										</span>
 									</td>
 									<!-- <td>
 									<p class="text-xs text-secondary mb-0"><?= $row->nama ?></p>
