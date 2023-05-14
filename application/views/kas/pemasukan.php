@@ -9,13 +9,13 @@
 
 			<div class="card my-4">
 				<div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-					<div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+					<div class="bg-gradient-info shadow-dark border-radius-lg pt-4 pb-3">
 						<h6 class="text-white text-capitalize ps-3">Pemasukan</h6>
 					</div>
 				</div>
 				<div class="card-body px-0 pb-2">
 					<div class="text-end me-3">
-						<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalTambah">
+						<button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalTambah">
 							<i class="material-icons opacity-10" translate="no">add</i> Tambah Data
 						</button>
 					</div>
