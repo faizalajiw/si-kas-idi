@@ -6,11 +6,19 @@ class Histori_m extends CI_Model
 
     private $kas = 'kas';
 
-    public function getLaporan($table, $tgl)
-    {
+    // public function getLaporan($table, $tgl)
+    // {
+    //     $this->db->order_by('tanggal', 'ASC');
+    //     $this->db->where('tanggal' . ' >=', $tgl['mulai']);
+    //     $this->db->where('tanggal' . ' <=', $tgl['akhir']);
+    //     return $this->db->get($table)->result();
+    // }
+
+    public function getCetakRekap($table, $tanggal) {
         $this->db->order_by('tanggal', 'ASC');
-        $this->db->where('tanggal' . ' >=', $tgl['mulai']);
-        $this->db->where('tanggal' . ' <=', $tgl['akhir']);
+        $this->db->where('tanggal' . ' >=', $tanggal['mulai']);
+        $this->db->where('tanggal' . ' <=', $tanggal['akhir']);      
+        $this->db->select('tanggal, kategori, keterangan, jumlah_masuk, jumlah_keluar');
         return $this->db->get($table)->result();
     }
     
