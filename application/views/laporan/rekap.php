@@ -65,12 +65,12 @@
 									<?php
 									$total_masuk = 0;
 									$total_keluar = 0;
-	
+
 									foreach ($result as $row) {
 										if (isset($row->jumlah_masuk)) {
 											$total_masuk += $row->jumlah_masuk;
 										}
-	
+
 										if (isset($row->jumlah_keluar)) {
 											$total_keluar += $row->jumlah_keluar;
 										}
@@ -122,12 +122,18 @@
 										<p class="text-sm text-secondary mb-0"><?= $row->keterangan ?></p>
 									</td>
 									<td>
-										<p class="text-sm font-weight-bold mb-0">Rp. <?= number_format($row->jumlah_masuk) ?>
-										</p>
+										<?php if ($row->jumlah_masuk != 0) : ?>
+											<p class="text-sm font-weight-bold mb-0">Rp. <?= number_format($row->jumlah_masuk) ?></p>
+										<?php else : ?>
+											<p>-</p>
+										<?php endif; ?>
 									</td>
 									<td>
-										<p class="text-sm font-weight-bold mb-0">Rp. <?= number_format($row->jumlah_keluar) ?>
-										</p>
+										<?php if ($row->jumlah_keluar != 0) : ?>
+											<p class="text-sm font-weight-bold mb-0">Rp. <?= number_format($row->jumlah_keluar) ?></p>
+										<?php else : ?>
+											<p>-</p>
+										<?php endif; ?>
 									</td>
 								</tr>
 							<?php endforeach ?>
