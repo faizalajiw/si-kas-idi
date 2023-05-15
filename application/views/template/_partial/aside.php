@@ -45,7 +45,7 @@
 			<li class="nav-item">
 				<a class="nav-link text-white <?php if($this->uri->segment(1) == 'rekap') echo 'active bg-gradient-primary' ?>" href="<?= base_url('rekap') ?>">
 					<div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-					<i class="material-icons opacity-10" translate="no">receipt_long</i>
+						<i class="material-icons opacity-10" translate="no">print</i>
 					</div>
 					<span class="nav-link-text ms-1">Rekap Laporan</span>
 				</a>
