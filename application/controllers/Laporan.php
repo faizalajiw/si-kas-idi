@@ -53,10 +53,10 @@ class Laporan extends CI_Controller
             
             $pdf->Cell(10, 7, 'No.', 1, 0, 'C');
             $pdf->Cell(25, 7, 'Tanggal', 1, 0, 'C');
-            $pdf->Cell(35, 7, 'Keterangan', 1, 0, 'C');
-            $pdf->Cell(40, 7, 'Kategori', 1, 0, 'C');
-            $pdf->Cell(45, 7, 'Jumlah Masuk', 1, 0, 'C');
-            $pdf->Cell(45, 7, 'Jumlah Keluar', 1, 0, 'C');
+            $pdf->Cell(55, 7, 'Keterangan', 1, 0, 'C');
+            $pdf->Cell(50, 7, 'Kategori', 1, 0, 'C');
+            $pdf->Cell(30, 7, 'Jumlah Masuk', 1, 0, 'C');
+            $pdf->Cell(30, 7, 'Jumlah Keluar', 1, 0, 'C');
             $pdf->Ln();
 
             $no = 1;
@@ -64,15 +64,23 @@ class Laporan extends CI_Controller
                 $pdf->SetFont('Arial', '', 10);
                 $pdf->Cell(10, 7, $no++ . '.', 1, 0, 'C');
                 $pdf->Cell(25, 7, $d->tanggal, 1, 0, 'C');
-                $pdf->Cell(35, 7, $d->keterangan, 1, 0, 'L');
-                $pdf->Cell(40, 7, $d->kategori, 1, 0, 'C');
-                $pdf->Cell(45, 7,"Rp. " . number_format($d->jumlah_masuk), 1, 0, 'L');
-                $pdf->Cell(45, 7,"Rp. " . number_format($d->jumlah_keluar), 1, 0, 'L');
+                $pdf->Cell(55, 7, $d->keterangan, 1, 0, 'L');
+                $pdf->Cell(50, 7, $d->kategori, 1, 0, 'C');
+                if ($d->jumlah_masuk != 0) {
+                    $pdf->Cell(30, 7,"Rp. " . number_format($d->jumlah_masuk), 1, 0, 'L');
+                } else {
+                    $pdf->Cell(30, 7, "-", 1, 0, 'L');
+                }
+                if ($d->jumlah_keluar != 0) {
+                    $pdf->Cell(30, 7,"Rp. " . number_format($d->jumlah_keluar), 1, 0, 'L');
+                } else {
+                    $pdf->Cell(30, 7, "-", 1, 0, 'L');
+                }
                 $pdf->Ln();
                 $total += $d->jumlah_masuk - $d->jumlah_keluar;
             }
-            $pdf->Cell(155, 7, 'Jumlah', 1, 0, 'L');
-            $pdf->Cell(45, 7, "Rp. " . number_format($total), 1, 0, 'C');
+            $pdf->Cell(140, 7, 'Jumlah', 1, 0, 'L');
+            $pdf->Cell(60, 7, "Rp. " . number_format($total), 1, 0, 'C');
             $pdf->Ln();
         endif;
 
