@@ -14,8 +14,8 @@
 				</div>
 				<div class="card-body px-0 pb-2">
 					<div class="text-end me-3">
-						<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalTambah">
-							<i class="material-icons opacity-10" translate="no">add</i> Tambah kas
+						<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalTambah">
+							<i class="material-icons opacity-10" translate="no">add</i> Tambah Data
 						</button>
 					</div>
 					<div class="table-responsive p-4 mx-2">

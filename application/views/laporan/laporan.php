@@ -1,8 +1,8 @@
 <div class="container-fluid py-4">
 	<div class="row justify-content-end">
-		<div class="col-6">
+		<!-- <div class="col-6">
 			<?= $this->session->flashdata('msg'); ?>
-		</div>
+		</div> -->
 	</div>
 	<div class="row justify-content-center">
 		<div class="col-10 col-md-8">
