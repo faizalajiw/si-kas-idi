@@ -108,9 +108,9 @@
 						</div>
 					</div>
 					<div class="row my-3">
-						<label>Keterangan</label>
+						<label>Keterangan <span style="color: red; font-size: 12px; opacity: 0.8;">(max.60 karakter)</span></label>
 						<div class="input-group input-group-outline">
-							<textarea name="keterangan" id="textarea" class="form-control" cols="10" rows="3"></textarea>
+							<textarea name="keterangan" id="textarea" maxlength="60" class="form-control" cols="10" rows="3"></textarea>
 						</div>
 					</div>
 					<div class="row my-3">

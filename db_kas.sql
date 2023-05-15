@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2023 at 06:28 PM
+-- Generation Time: May 15, 2023 at 10:25 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -123,8 +123,8 @@ INSERT INTO `jam_buka` (`id`, `hari`, `jam`) VALUES
 CREATE TABLE `kas` (
   `id` int(11) NOT NULL,
   `tanggal` date NOT NULL,
-  `kategori` varchar(100) NOT NULL,
-  `keterangan` text NOT NULL,
+  `kategori` char(60) NOT NULL,
+  `keterangan` char(60) NOT NULL,
   `jumlah_masuk` int(11) NOT NULL,
   `jumlah_keluar` int(11) NOT NULL,
   `jenis` enum('masuk','keluar') NOT NULL
@@ -137,9 +137,15 @@ CREATE TABLE `kas` (
 INSERT INTO `kas` (`id`, `tanggal`, `kategori`, `keterangan`, `jumlah_masuk`, `jumlah_keluar`, `jenis`) VALUES
 (1, '2023-05-12', 'Iuran P2KB', '', 500000, 0, 'masuk'),
 (2, '2023-05-13', 'Sosial (Tahziyah), THR', '', 0, 100000, 'keluar'),
-(3, '2023-05-13', 'Iuran IDI, Hibah', '', 2500000, 0, 'masuk'),
-(4, '2023-05-13', 'ATK', '', 0, 300000, 'keluar'),
-(5, '2023-05-14', 'Kegiatan IDI', '', 0, 500000, 'keluar');
+(3, '2023-05-13', 'Iuran IDI, Hibah', 'Lorem Ipsum is simply dummy text of the printing and typese', 2500000, 0, 'masuk'),
+(4, '2023-05-13', 'ATK', 'Lorem Ipsum is simply dummy text of the printing and typese', 0, 300000, 'keluar'),
+(5, '2023-05-14', 'Kegiatan IDI', 'Lorem Ipsum is simply dummy text of the printing and typese', 0, 500000, 'keluar'),
+(6, '2023-05-15', 'Kegiatan IDI', '', 0, 500000, 'keluar'),
+(7, '2023-05-15', 'Iuran IDI, Hibah', 'Lorem Ipsum is simply dummy text of the printing and typese', 15000000, 0, 'masuk'),
+(8, '2023-05-15', 'Transport Perjalanan Dinas', '', 0, 5000000, 'keluar'),
+(9, '2023-05-15', 'Iuran IDI, Hibah', '', 100000000, 0, 'masuk'),
+(10, '2023-05-15', 'Pemeliharaan Gedung', '', 0, 50000000, 'keluar'),
+(11, '2023-05-15', 'Iuran IDI, Hibah', '', 200000000, 0, 'masuk');
 
 -- --------------------------------------------------------
 
@@ -335,7 +341,7 @@ ALTER TABLE `jam_buka`
 -- AUTO_INCREMENT for table `kas`
 --
 ALTER TABLE `kas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `layanan`
