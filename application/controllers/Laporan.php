@@ -5,7 +5,7 @@ class Laporan extends CI_Controller
 {
     public function index()
     {
-        $this->load->model('laporan_m');
+        $this->load->model('histori_m');
         check_not_login();
         $post = $this->input->post(NULL, TRUE);
         if (isset($post['cetak'])) {
@@ -15,7 +15,7 @@ class Laporan extends CI_Controller
             $tglMulai = date('Y-m-d', strtotime($pecahTanggal[0]));
             $tglAkhir = date('Y-m-d', strtotime(end($pecahTanggal)));
             
-            $query = $this->laporan_m->getLaporan($table, ['mulai' => $tglMulai, 'akhir' => $tglAkhir]);
+            $query = $this->histori_m->getLaporan($table, ['mulai' => $tglMulai, 'akhir' => $tglAkhir]);
             $this->_cetak($query, $table, $tanggal);
 
         }else{
@@ -49,13 +49,14 @@ class Laporan extends CI_Controller
         $pdf->SetFont('Arial', 'B', 10);
 
         $total = 0;
-        if ($table == 'pemasukan') :
+        if ($table == 'kas') :
             
             $pdf->Cell(10, 7, 'No.', 1, 0, 'C');
             $pdf->Cell(25, 7, 'Tanggal', 1, 0, 'C');
-            $pdf->Cell(85, 7, 'Keterangan', 1, 0, 'C');
-            $pdf->Cell(45, 7, 'Jumlah', 1, 0, 'C');
-            // $pdf->Cell(30, 7, 'Status', 1, 0, 'C');
+            $pdf->Cell(35, 7, 'Keterangan', 1, 0, 'C');
+            $pdf->Cell(40, 7, 'Kategori', 1, 0, 'C');
+            $pdf->Cell(45, 7, 'Jumlah Masuk', 1, 0, 'C');
+            $pdf->Cell(45, 7, 'Jumlah Keluar', 1, 0, 'C');
             $pdf->Ln();
 
             $no = 1;
@@ -63,37 +64,15 @@ class Laporan extends CI_Controller
                 $pdf->SetFont('Arial', '', 10);
                 $pdf->Cell(10, 7, $no++ . '.', 1, 0, 'C');
                 $pdf->Cell(25, 7, $d->tanggal, 1, 0, 'C');
-                $pdf->Cell(85, 7, $d->catatan, 1, 0, 'L');
-                $pdf->Cell(45, 7,"Rp. " . number_format($d->jumlah), 1, 0, 'L');
-                // $pdf->Cell(30, 7, $d->status, 1, 0, 'C');
+                $pdf->Cell(35, 7, $d->keterangan, 1, 0, 'L');
+                $pdf->Cell(40, 7, $d->kategori, 1, 0, 'C');
+                $pdf->Cell(45, 7,"Rp. " . number_format($d->jumlah_masuk), 1, 0, 'L');
+                $pdf->Cell(45, 7,"Rp. " . number_format($d->jumlah_keluar), 1, 0, 'L');
                 $pdf->Ln();
-                $total += $d->jumlah;
+                $total += $d->jumlah_masuk - $d->jumlah_keluar;
             }
-            $pdf->Cell(120, 7, 'Jumlah', 1, 0, 'L');
+            $pdf->Cell(155, 7, 'Jumlah', 1, 0, 'L');
             $pdf->Cell(45, 7, "Rp. " . number_format($total), 1, 0, 'C');
-            $pdf->Ln();
-        else :
-            $pdf->Cell(10, 7, '', 0, 0, 'C');
-            $pdf->Cell(10, 7, 'No.', 1, 0, 'C');
-            $pdf->Cell(25, 7, 'Tanggal', 1, 0, 'C');
-            $pdf->Cell(85, 7, 'Keterangan', 1, 0, 'C');
-            $pdf->Cell(55, 7, 'Jumlah', 1, 0, 'C');
-            $pdf->Ln();
-
-            $no = 1;
-            foreach ($data as $d) {
-                $pdf->SetFont('Arial', '', 10);
-                $pdf->Cell(10, 7, '', 0, 0, 'C');
-                $pdf->Cell(10, 7, $no++ . '.', 1, 0, 'C');
-                $pdf->Cell(25, 7, $d->tanggal, 1, 0, 'C');
-                $pdf->Cell(85, 7, $d->catatan, 1, 0, 'L');
-                $pdf->Cell(55, 7,"Rp. " . number_format($d->jumlah), 1, 0, 'L');
-                $pdf->Ln();
-                $total += $d->jumlah;
-            }
-            $pdf->Cell(10, 7, '', 0, 0, 'C');
-            $pdf->Cell(120, 7, 'Jumlah', 1, 0, 'L');
-            $pdf->Cell(55, 7, "Rp. " . number_format($total), 1, 0, 'C');
             $pdf->Ln();
         endif;
 

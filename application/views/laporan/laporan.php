@@ -20,18 +20,12 @@
 							<div class="col-sm-6">
 								<div class="form-check">
 									<input class="form-check-input" type="radio" name="tabel"
-										id="pemasukan" value="pemasukan" checked>
-									<label class="form-check-label" for="pemasukan">
-										Pemasukan
+										id="kas" value="kas" checked>
+									<label class="form-check-label" for="kas">
+										Kas
 									</label>
 								</div>
-								<div class="form-check">
-									<input class="form-check-input" type="radio" name="tabel"
-										id="pengeluaran" value="pengeluaran">
-									<label class="form-check-label" for="pengeluaran">
-										Pengeluaran
-									</label>
-								</div>
+								
 							</div>
 						</div>
 						<div class="row mt-4">
