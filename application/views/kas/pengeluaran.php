@@ -95,7 +95,7 @@
 						<div class="input-group input-group-outline">
 							<select class="form-control" name="kategori">
 								<option value="">Pilih Kategori</option>
-								<option value="Rutin Gedung">Rutin Geudng</option>
+								<option value="Rutin Gedung">Rutin Gedung</option>
 								<option value="Honor Pegawai IDI">Honor Pegawai IDI</option>
 								<option value="Transport Perjalanan Dinas">Transport Perjalanan Dinas</option>
 								<option value="Pembangunan Gedung">Pembangunan Gedung</option>
@@ -111,7 +111,7 @@
 						</div>
 					</div>
 					<div class="row my-3">
-					<label>Keterangan <span style="color: red; font-size: 12px;">(max.60 karakter)</span></label>
+					<label>Keterangan <span style="color: red; font-size: 12px; opacity: 0.8;">(max.60 karakter)</span></label>
 						<div class="input-group input-group-outline">
 							<textarea name="keterangan" maxlength="60" class="form-control" cols="10" rows="3"></textarea>
 						</div>
