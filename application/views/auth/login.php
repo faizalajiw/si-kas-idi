@@ -45,11 +45,11 @@
 										<!-- <label class="form-label">Password</label> -->
 										<input type="password" name="password" required class="form-control" placeholder="password">
 									</div>
-									<div class="form-check form-switch d-flex align-items-center mb-3">
+									<!-- <div class="form-check form-switch d-flex align-items-center mb-3">
 										<input class="form-check-input" name="rememberMe" type="checkbox"
 											id="rememberMe">
 										<label class="form-check-label mb-0 ms-2" for="rememberMe">Remember me</label>
-									</div>
+									</div> -->
 									<div class="text-center">
 										<button type="submit" name="login"
 											class="btn bg-gradient-primary w-100 my-4 mb-2">Login</button>

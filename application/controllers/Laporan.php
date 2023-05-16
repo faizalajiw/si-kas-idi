@@ -30,7 +30,7 @@ class Laporan extends CI_Controller
 
         $pdf->AddPage('P', 'A4');
         // $pdf->Image('logo.png',20,6,23);
-        $pdf->Image('assets/img/logo-idi.png', 10, 15, 20, 20);
+        // $pdf->Image('assets/img/logo-idi.png', 10, 15, 20, 20);
         $pdf->SetFont('Arial', 'B', 10);
         $pdf->Cell(190, 7, '', 0, 1, 'L');
         $pdf->SetFont('Arial', 'B', 16);
