@@ -119,16 +119,16 @@ class Laporan extends CI_Controller
 
             // ------------------ AKHIR -------------------
             // Title 3: Total Pemasukan
-            $pdf->SetFont('Arial', 'B', 11);
-            $pdf->Cell(40, 10, 'Total Pemasukan : ', 0, 0, 'L');
-            $pdf->Cell(70, 10, "Rp. " . number_format($total_masuk), 0, 0, 'L');
-            $pdf->Ln(10);
+            // $pdf->SetFont('Arial', 'B', 11);
+            // $pdf->Cell(40, 10, 'Total Pemasukan : ', 0, 0, 'L');
+            // $pdf->Cell(70, 10, "Rp. " . number_format($total_masuk), 0, 0, 'L');
+            // $pdf->Ln(10);
 
             // Title 4: Total Pengeluaran
-            $pdf->SetFont('Arial', 'B', 11);
-            $pdf->Cell(40, 10, 'Total Pengeluaran : ', 0, 0, 'L');
-            $pdf->Cell(70, 10, "Rp. " . number_format($total_keluar), 0, 0, 'L');
-            $pdf->Ln(10);
+            // $pdf->SetFont('Arial', 'B', 11);
+            // $pdf->Cell(40, 10, 'Total Pengeluaran : ', 0, 0, 'L');
+            // $pdf->Cell(70, 10, "Rp. " . number_format($total_keluar), 0, 0, 'L');
+            // $pdf->Ln(10);
     
             // Title 5: Saldo Akhir
             $saldo_akhir = $total_masuk - $total_keluar;
